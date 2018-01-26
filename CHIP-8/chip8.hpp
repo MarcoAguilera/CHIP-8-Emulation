@@ -9,6 +9,9 @@
 #ifndef chip8_hpp
 #define chip8_hpp
 
+#include <map>
+using namespace std;
+
 class Chip8{
 public:
     Chip8();
@@ -18,7 +21,7 @@ public:
 private:
     unsigned short opcode;
     unsigned char memory[4096]; // CHIP - 8 Has A Total of 4k Memory
-    unsigned char vRegisters[16]; // V - Registers (V0 - VE)
+    map<unsigned char, unsigned char> vRegisters;
     unsigned short iR; // Index Register
     unsigned short pC; // Program Counter
     unsigned char graphics[64 * 32]; // Screen Dimensions Are 64 * 32 (2048 Pixels)

@@ -191,7 +191,12 @@ void Chip8::emulateCycle()
             vRegisters[opcode >> 8 & 0x0F] = rand() % 256 & (opcode & 0x00FF);
             pC += 2;
             break;
-        
+        case 0xD000:
+            // NEEDS TO BE COMPLETED IN SDL PHASE
+            break;
+        case 0xE000:
+            
+            break;
     }
 }
 
